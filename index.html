@@ -8,11 +8,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/spinner.css">
 
   <title>Test Gallery</title>
 </head>
 
 <body>
+  <span id="overlayBox"></span>
   <div class="container">
         <div class="row">
             <div class="column " id="column1"></div>
@@ -28,11 +30,6 @@
 <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
         <div class="modal-body">
           <img id="modal_image" class="modal_image" src="" alt="">
         </div>
@@ -43,6 +40,7 @@
     </div>
 </div>
 
+<script src="./static/js/spinner.js"></script>
 <script src="./static/js/links.js"></script>
 <script src="./static/js/index.js"></script>
 

@@ -1,7 +1,5 @@
 "use strict";
 
-window.onload = (event) => {};
-
 let URL = "https://drive.google.com/uc?export=view&id=";
 let sorted_links = [];
 let image_links_Array = [];
@@ -43,7 +41,8 @@ let build_HTML = (gallery, array_position) => {
   for (let i = 0; i < image_links_Array[array_position].length; i++) {
     let imageURL = URL + image_links_Array[array_position][i].toString();
     gallery.innerHTML += `
-        <a href="#" data-id="${imageURL}" data-toggle="modal" data-target="#imageModal" class="imagebox"><img src="${imageURL}" alt="${imageURL}" class="photo"></a>`;
+        <a href="#" data-id="${imageURL}" data-toggle="modal" data-target="#imageModal" class="imagebox">
+        <img src="${imageURL}" alt="${imageURL}" onerror="this.src='./static/media/noimage.jpg'";class="photo"></a>`;
   }
 };
 
